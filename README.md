@@ -3,13 +3,13 @@ A Web Application that store the issues, new experience that the UI/SD developer
 Include Search feature, so other Company members can gain this information easily and prevent the wasting of time trying to solve the same issue. 
 
 # Application Description:
-The application consists of 4 screens
-i.	User registration
-ii.	Login screen
-iii. View all problems
-iv. Create new problem info
-v. Edit old problem info
-vi. Delete old problem info
+The application consists of 4 screens.
+i.	User registration.
+ii.	Login screen.
+iii. View all problems.
+iv. Create new problem info.
+v. Edit old problem info.
+vi. Delete old problem info.
 
 
 ## Installation
