@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="KnowledgeGarden_AModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="ProblemsDatas">
+      <EntityTypeMapping TypeName="KnowledgeGarden_AModel.ProblemsData">
+        <MappingFragment StoreEntitySet="ProblemsData">
+          <ScalarProperty Name="ProblemNo" ColumnName="ProblemNo" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Problem" ColumnName="Problem" />
+          <ScalarProperty Name="Solution" ColumnName="Solution" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

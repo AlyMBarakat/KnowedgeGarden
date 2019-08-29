@@ -1,0 +1,55 @@
+﻿@model KGA.Models.ProblemsData
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ProblemsData</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DateAndTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateAndTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProblemDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProblemDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Attachments)
+        </dt>
+
+        
+        @foreach (var attachment in Model.Attachments)
+            {
+            <dd>
+                @attachment.FileName
+                @Html.ActionLink("Download", "Download", new { id = attachment.FileID})
+            </dd>
+        }
+       
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ProblemID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

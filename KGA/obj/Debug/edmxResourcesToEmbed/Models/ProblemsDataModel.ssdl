@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="KnowledgeGarden_AModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Attachments">
+    <Key>
+      <PropertyRef Name="FileID" />
+    </Key>
+    <Property Name="FileID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProblemID" Type="int" />
+    <Property Name="UserName" Type="varchar" MaxLength="250" />
+    <Property Name="FileName" Type="varchar(max)" />
+    <Property Name="ContentType" Type="varchar" MaxLength="50" />
+    <Property Name="Data" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="ProblemsData">
+    <Key>
+      <PropertyRef Name="ProblemID" />
+    </Key>
+    <Property Name="ProblemID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DateAndTime" Type="datetime" Nullable="false" />
+    <Property Name="Title" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ProblemDescription" Type="nvarchar(max)" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Attachments_ProblemsData">
+    <End Role="ProblemsData" Type="Self.ProblemsData" Multiplicity="0..1" />
+    <End Role="Attachments" Type="Self.Attachments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProblemsData">
+        <PropertyRef Name="ProblemID" />
+      </Principal>
+      <Dependent Role="Attachments">
+        <PropertyRef Name="ProblemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="KnowledgeGarden_AModelStoreContainer">
+    <EntitySet Name="Attachments" EntityType="Self.Attachments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProblemsData" EntityType="Self.ProblemsData" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Attachments_ProblemsData" Association="Self.FK_Attachments_ProblemsData">
+      <End Role="ProblemsData" EntitySet="ProblemsData" />
+      <End Role="Attachments" EntitySet="Attachments" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

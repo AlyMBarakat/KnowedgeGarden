@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="KnowledgeGarden_AModelStoreContainer" CdmEntityContainer="KnowledgeGarden_AEntities">
+    <EntitySetMapping Name="ProblemsDatas">
+      <EntityTypeMapping TypeName="KnowledgeGarden_AModel.ProblemsData">
+        <MappingFragment StoreEntitySet="ProblemsData">
+          <ScalarProperty Name="ProblemID" ColumnName="ProblemID" />
+          <ScalarProperty Name="DateAndTime" ColumnName="DateAndTime" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ProblemDescription" ColumnName="ProblemDescription" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Attachments">
+      <EntityTypeMapping TypeName="KnowledgeGarden_AModel.Attachment">
+        <MappingFragment StoreEntitySet="Attachments">
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="ContentType" ColumnName="ContentType" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="ProblemID" ColumnName="ProblemID" />
+          <ScalarProperty Name="FileID" ColumnName="FileID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

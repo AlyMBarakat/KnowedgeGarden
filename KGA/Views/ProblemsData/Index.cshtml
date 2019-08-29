@@ -1,0 +1,63 @@
+﻿@model IEnumerable<KGA.Models.ProblemsData>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.UserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateAndTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProblemDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Attachments)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateAndTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProblemDescription)
+        </td>
+        <td>
+            @foreach (var attachment in item.Attachments)
+            {
+                <dd>
+                    @attachment.FileName
+                </dd>
+              
+            }
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ProblemID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ProblemID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ProblemID })
+        </td>
+    </tr>
+}
+
+</table>
