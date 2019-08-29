@@ -24,7 +24,7 @@ Adjust the connection string in the web.config file to your database path
 
 
 ## History
-This project was contributed as a part of month and a half summer inturnship at CivilSoft, Alexandria branch.
+This project was implemented as part of a month and a half summer inturnship at CivilSoft, Alexandria branch.
 
 ## Credits
 Special thanks to Eng.Hend Ibrahim at CivilSoft CO. for mentoring this project.
