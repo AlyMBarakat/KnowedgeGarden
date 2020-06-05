@@ -1,4 +1,4 @@
-# KnowedgeGarden
+# Knowledge Garden
 A Web Application that stores the issues and new experiences that the UI/SD developers faced during work.
 Include Search feature, so other Company members can gain this information easily and prevent the wasting of time trying to solve the same issue.
 
