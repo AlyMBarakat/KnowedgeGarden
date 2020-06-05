@@ -1,5 +1,5 @@
 # KnowedgeGarden
-A Web Application that store the issues, new experience that the UI/SD developers faced during work.
+A Web Application that stores the issues and new experiences that the UI/SD developers faced during work.
 Include Search feature, so other Company members can gain this information easily and prevent the wasting of time trying to solve the same issue.
 
 The project is implemented using ASP.NET framework version 4.7 MVC, and for data access I used Entity framework and ADO.NET to communicate with Microsoft SQL-Server.
